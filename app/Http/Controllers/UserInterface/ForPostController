@@ -1,0 +1,35 @@
+<?php
+
+namespace App\Http\Controllers\UserInterface;
+
+use Illuminate\Http\Request;
+use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Support\Facades\Input;
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
+
+use App\Models\Validators;
+use App\Models\Dropzone;
+use App\Models\Rent\Rent;
+use App\Models\Helper;
+use App\Models\Categories;
+
+use Crypt;
+use Auth;
+
+class ForPostController extends Controller{
+
+    function __construct()
+    {
+        parent::__construct(); // Extend the constructor from the main controller
+        
+    }
+
+    function index()
+    {
+        Rent::addData('omari123');
+		return view('user-interface\dashboard\for-rent\manage');
+    }
+
+
+}

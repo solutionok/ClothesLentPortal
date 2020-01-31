@@ -1,0 +1,14 @@
+<IfModule mod_rewrite.c>
+
+    
+    RewriteEngine On
+
+    RewriteCond %{SERVER_PORT} 80
+    RewriteCond %{HTTP_HOST} ^(www\.)?rentasuit\.ca
+    RewriteRule ^(.*)$ https://www.rentasuit.ca/$1 [R,L]
+
+    php_value memory_limit 1024M
+
+    RewriteRule ^(.*)$ public/$1 [L]
+
+</IfModule>
